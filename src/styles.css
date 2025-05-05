@@ -1,0 +1,17 @@
+body {
+    background: plum;
+
+    h1 {
+        text-align: center;
+    }
+    h2{
+        text-align: center;
+    }
+
+    button {
+        display: block;
+        margin: 0 auto;
+        border: 1px solid plum;
+        background: white;
+    }
+}
