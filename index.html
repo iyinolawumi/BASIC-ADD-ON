@@ -3,103 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/styles.css" />
     <title>Landing page of my hobby practical</title>
-    <style>
-    body {
-        background: linear-gradient(109.6deg, rgb(251, 186, 186) 
-                                11.2%, rgb(200, 122, 245) 91.2%);
-    
-        h1 {
-            text-align: center;
-        }
-        h2{
-            text-align: center;
-        }
-
-        img {
-            max-width: 100%;
-        }
-    }
-
-
-        .container {
-            max-width: 600px;
-            background: rgb(202, 129, 207);
-            padding: 20px;
-            border-radius: 10px;
-            margin: 20px auto;
-        }
-
-        .wrestling-intro-picture {
-            border-radius: 10px;
-            transition: all 150ms ease-in-out;
-        }
-
-        .wrestling-intro-picture:hover {
-            opacity: 0.7;
-            filter: contrast(80%);
-            transform: scale(1.1);
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-gap: 10px;
-        }
-
-        .grid img {
-            width: 100%;
-            transition: all 150ms ease-in-out;
-        }
-
-        .grid img:hover {
-            transform: scale(2);
-        }
-
-        .theme-button {
-            font-size: 12px;
-            background: black;
-            color: white;
-            padding: 3 5px;
-        }
-
-        .theme-button:hover {
-            color: black;
-            background: white;
-        }
-    
-        button {
-            display: block;
-            margin: 0 auto;
-            border: 1px solid plum;
-            background: white;
-            font-size: 24px;
-            border-radius: 6px;
-            padding: 10px 15px;
-            transition: all 150ms ease-in-out;
-        }
-
-        button:hover {
-            background: plum;
-            cursor: pointer;
-        }
-
-        .dark {
-            background: linear-gradient(89.7deg, rgb(0, 0, 0) 
-                        -10.7%, rgb(53, 92, 125) 88.8%);
-        
-        }
-
-        .dark .container {
-            background: rgb(26, 54, 79);
-        }  
-
-        footer {
-            text-align: center;
-             margin: 10px 0;
-             font-size: 18px;
-        }
-    </style>
 </head>
 <body>
     <button class="theme-button">Change theme</button>
@@ -139,19 +44,6 @@
     <footer>
     Coded with 💜💜💜 by Olaibi Praise
    </footer>
-   <script>
-    function changeTheme() {
-        let body = document.querySelector("body");
-        
-        if (body.classList.contains("dark")) {
-            body.classList.remove("dark");
-        } else {
-            body.classList.add("dark");
-        }
-    }
-
-    let themeButton = document.querySelector(".theme-button");
-    themeButton.addEventListener("click", changeTheme);
-   </script>
+   <script src="src/index.js"></script>
 </body>
 </html>
