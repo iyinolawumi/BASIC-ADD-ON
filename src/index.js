@@ -11,5 +11,5 @@ function ChangeTheme(){
     }
 }
 
-let ThemeButton = document.querySelector("theme-button");
-ThemeButton.addEventListener("click", ChangeTheme);
+let themeButton = document.querySelector(".theme-button");
+themeButton.addEventListener("click", ChangeTheme);

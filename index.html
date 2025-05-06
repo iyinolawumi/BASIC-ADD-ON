@@ -6,7 +6,8 @@
     <title>Landing page of my hobby practical</title>
     <style>
     body {
-        background: plum;
+        background: linear-gradient(109.6deg, rgb(251, 186, 186) 
+                                11.2%, rgb(200, 122, 245) 91.2%);
     
         h1 {
             text-align: center;
@@ -15,8 +16,56 @@
             text-align: center;
         }
 
+        img {
+            max-width: 100%;
+        }
+    }
+
+
         .container {
-            text-align: center;
+            max-width: 600px;
+            background: rgb(202, 129, 207);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+        }
+
+        .wrestling-intro-picture {
+            border-radius: 10px;
+            transition: all 150ms ease-in-out;
+        }
+
+        .wrestling-intro-picture:hover {
+            opacity: 0.7;
+            filter: contrast(80%);
+            transform: scale(1.1);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 10px;
+        }
+
+        .grid img {
+            width: 100%;
+            transition: all 150ms ease-in-out;
+        }
+
+        .grid img:hover {
+            transform: scale(2);
+        }
+
+        .theme-button {
+            font-size: 12px;
+            background: black;
+            color: white;
+            padding: 3 5px;
+        }
+
+        .theme-button:hover {
+            color: black;
+            background: white;
         }
     
         button {
@@ -24,14 +73,36 @@
             margin: 0 auto;
             border: 1px solid plum;
             background: white;
+            font-size: 24px;
+            border-radius: 6px;
+            padding: 10px 15px;
+            transition: all 150ms ease-in-out;
         }
+
+        button:hover {
+            background: plum;
+            cursor: pointer;
+        }
+
+        .dark {
+            background: linear-gradient(89.7deg, rgb(0, 0, 0) 
+                        -10.7%, rgb(53, 92, 125) 88.8%);
+        
+        }
+
+        .dark .container {
+            background: rgb(26, 54, 79);
+        }  
+
         footer {
-             text-align: center;
-            }
+            text-align: center;
+             margin: 10px 0;
+             font-size: 18px;
+        }
     </style>
 </head>
 <body>
-    <button>Change theme</button>
+    <button class="theme-button">Change theme</button>
     <div class="container">
    <h1>
     🤼What is wrestling
@@ -39,12 +110,15 @@
    <h2>
     My favorite type of sport
    </h2>
-   <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/164/885/original/wrestle4.jpg?1746443899" width="500" alt="wrestle1">
-</br>
-   <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/164/883/original/wrestle1.jpg?1746443862" width="200" alt="wrestle2">
-   <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/164/882/original/wrerstle3.jpg?1746443839" width="200" alt="wrestle3">
-   <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/164/884/original/wrestle2.jpeg?1746443879" width="200" alt="wrestle4">
-   <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/164/886/original/wrestle5.jpg?1746443912" width="200" alt="wrestle5">
+   <a href="https://en.wikipedia.org/wiki/Wrestling" target="_blank">
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/164/885/original/wrestle4.jpg?1746443899" alt="wrestle1" class="wrestling-intro-picture"/>
+   </a>
+   <div class="grid">
+   <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/164/883/original/wrestle1.jpg?1746443862" alt="wrestle2"/>
+   <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/164/899/original/wretle6.jpg?1746456667" alt="wrestle3"/>
+   <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/164/884/original/wrestle2.jpeg?1746443879" alt="wrestle4"/>
+   <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/164/886/original/wrestle5.jpg?1746443912"  alt="wrestle5"/>
+   </div>
    <p>
     Wrestling is a martial art, combat sport, and form of entertainment that involves 
     grappling with an opponent and striving to obtain a position of advantage through 
@@ -60,9 +134,24 @@
     varying rules, with both traditional historic and modern styles. The term "wrestling" 
     in Modern English originated from the late Old English term wræstlunge .
    </p>
+      <button>Learn wrestling</button>
     </div>
-</body>
-<footer>
-    Coded by 💜💜💜Olaibi Praise
+    <footer>
+    Coded with 💜💜💜 by Olaibi Praise
    </footer>
+   <script>
+    function changeTheme() {
+        let body = document.querySelector("body");
+        
+        if (body.classList.contains("dark")) {
+            body.classList.remove("dark");
+        } else {
+            body.classList.add("dark");
+        }
+    }
+
+    let themeButton = document.querySelector(".theme-button");
+    themeButton.addEventListener("click", changeTheme);
+   </script>
+</body>
 </html>
